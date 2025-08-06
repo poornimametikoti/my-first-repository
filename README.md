@@ -1,2 +1,3 @@
-# my-first-repository
-learning GitHub with DevOps
+Name: Poornima
+Course: BSC Computer Science
+One thing I learned about Github Anyone can access our repositories
