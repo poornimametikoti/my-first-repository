@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DevOps Lifecycle Diagram</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f7fa;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+      color: #2c3e50;
+    }
+
+    .lifecycle {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .stage {
+      background: #007BFF;
+      color: white;
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin: 10px;
+      position: relative;
+      transition: transform 0.3s;
+    }
+
+    .stage:hover {
+      transform: scale(1.1);
+      background: #0056b3;
+    }
+
+    .arrow {
+      width: 50px;
+      height: 2px;
+      background: #333;
+      position: relative;
+      margin: 0 10px;
+    }
+
+    .arrow::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: -5px;
+      border-top: 7px solid transparent;
+      border-bottom: 7px solid transparent;
+      border-left: 10px solid #333;
+    }
+
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .explanations {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .explanations h2 {
+      color: #007BFF;
+      margin-bottom: 10px;
+    }
+
+    .explanations p {
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      .stage {
+        width: 90px;
+        height: 90px;
+        font-size: 0.85em;
+      }
+
+      .arrow {
+        width: 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>DevOps Lifecycle Diagram</h1>
+
+  <!-- Visual Diagram -->
+  <div class="lifecycle">
+    <div class="row">
+      <div class="stage">Plan</div>
+      <div class="arrow"></div>
+      <div class="stage">Develop</div>
+      <div class="arrow"></div>
+      <div class="stage">Build</div>
+      <div class="arrow"></div>
+      <div class="stage">Test</div>
+    </div>
+    <div class="row">
+      <div class="stage">Release</div>
+      <div class="arrow"></div>
+      <div class="stage">Deploy</div>
+      <div class="arrow"></div>
+      <div class="stage">Operate</div>
+      <div class="arrow"></div>
+      <div class="stage">Monitor</div>
+      <div class="arrow"></div>
+      <div class="stage">Plan</div> <!-- Loop back -->
+    </div>
+  </div>
+
+  <!-- Explanations -->
+  <div class="explanations">
+    <h2>Plan</h2>
+    <p>In the planning stage, teams define the requirements, goals, and roadmaps of the software product. It involves collaboration between development, operations, and business stakeholders to understand customer needs and align objectives.</p>
+
+    <h2>Develop</h2>
+    <p>Development includes designing and writing code for the application. Developers use version control systems (like Git), follow coding standards, and collaborate using agile practices to produce high-quality, incremental software updates.</p>
+
+    <h2>Build</h2>
+    <p>This stage compiles the source code into executable applications. Automated build tools are used to integrate and verify code changes regularly (CI - Continuous Integration), reducing integration issues later.</p>
+
+    <h2>Test</h2>
+    <p>Testing ensures the quality and functionality of the application. Automated and manual testing (unit, integration, system, performance) are performed to identify bugs early and ensure the product meets requirements.</p>
+
+    <h2>Release</h2>
+    <p>The release phase involves packaging the application and preparing it for deployment. It's where approval processes, change control, and documentation occur, ensuring that only tested and verified builds reach production.</p>
+
+    <h2>Deploy</h2>
+    <p>Deployment delivers the application to production environments. DevOps practices encourage automated, repeatable, and safe deployments (CD - Continuous Delivery/Deployment), allowing rapid and reliable releases.</p>
+
+    <h2>Operate</h2>
+    <p>In the operate stage, the deployed applications are managed and maintained. Teams ensure system uptime, performance, and availability, often using infrastructure as code (IaC), container orchestration, and cloud services.</p>
+
+    <h2>Monitor</h2>
+    <p>Monitoring involves collecting and analyzing performance, security, and usage data. This feedback helps detect issues, improve performance, and inform future planning and development decisions, completing the lifecycle.</p>
+  </div>
+
+  <div class="footer">
+    <p>&copy; 2025 DevOps Lifecycle Visual Guide. All rights reserved.</p>
+  </div>
+
+</body>
+</html>
